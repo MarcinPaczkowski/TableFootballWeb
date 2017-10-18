@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'football-shell',
-  templateUrl: './shell.component.html'
+  selector: 'football-login',
+  templateUrl: './login.component.html',
 })
-export class ShellComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
@@ -14,8 +14,8 @@ export class ShellComponent implements OnInit {
   ngOnInit() {
   }
 
-
-  logout() {
-    this.router.navigate(['/login']);
+  login() {
+    this.router.navigate(['../']);
   }
+
 }

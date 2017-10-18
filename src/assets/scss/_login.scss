@@ -1,0 +1,24 @@
+.login {
+    &__container {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__frame {
+        display: inline-block;
+        padding: 120px 150px;
+        border: 1px solid #28a745;
+        border-radius: 15px;
+    }
+
+    &__header {
+        align-self: center;
+        margin-bottom: 0.5em;
+    }
+
+    &__button {
+        text-align: center;
+    }
+}
