@@ -6,6 +6,10 @@
   <button class="btn btn-outline-success my-2 my-sm-0" (click)="logout()">Wyloguj</button>
 </nav>
 <div class="">
-    <football-side-menu></football-side-menu>
-    <football-content-panel></football-content-panel>
+    <football-side-menu (onClick)='changeCardTitle($event)'></football-side-menu>
+    <football-content-panel>
+      <div class="content-panel-heading">
+        {{ cardTitle }}
+      </div>
+    </football-content-panel>
 </div>
