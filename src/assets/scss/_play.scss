@@ -1,0 +1,17 @@
+.play {
+    &__scoring {        
+        &-ball {
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+
+        &-ball-selected {
+            opacity: 1
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+}

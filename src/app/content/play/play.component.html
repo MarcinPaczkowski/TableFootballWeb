@@ -1,3 +1,25 @@
-<p>
-  play works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="redPlayer">Czerwony gracz</label>
+    <select class="form-control" ngModel name="redPlayer" id="redPlayer">
+      <option [value]="Test">Test</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="yellowPlayer">Żółty gracz</label>
+    <select class="form-control" ngModel name="yellowPlayer" id="yellowPlayer">
+      <option [value]="Test">Test</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="score">Wynik</label>
+    <ngb-rating class="play__scoring" [(rate)]="currentRate">
+      <ng-template let-fill="fill">
+        <span class="play__scoring-ball" [class.play__scoring-ball-filled]="fill === 100">&#9917;</span>
+      </ng-template>
+    </ngb-rating>
+    <hr>
+    <pre>Rate: <b>{{currentRate}}</b></pre>
+  </div>
+  <button class="btn btn-primmary">Dodaj wynik</button>
+</form>

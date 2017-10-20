@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class PlayComponent implements OnInit {
-
+  private currentRate = 0;
   constructor() { }
 
   ngOnInit() {
