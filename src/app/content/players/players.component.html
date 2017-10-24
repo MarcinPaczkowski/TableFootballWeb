@@ -5,19 +5,14 @@
         <th class="text-center">Nazwa</th>
         <th class="text-center">Wygrane</th>
         <th class="text-center">Przegrane</th>
-        <th class="text-center">Online</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let player of players">
-        <th class="text-center" scope="row">{{ player.id }}</th>
+      <tr *ngFor="let player of players | async">
+        <th class="text-center" scope="row">{{ player }}</th>
         <td class="text-center">{{ player.name }}</td>
         <td class="text-center">{{ player.wonMatchesCounter }}</td>
         <td class="text-center">{{ player.lostMatchesCounter }}</td>
-        <td class="text-center">
-          <input type="checkbox" disabled="disabled" [ngModel]="player.isOnline">
-        </td>
       </tr>
-      <tr>
     </tbody>
   </table>
