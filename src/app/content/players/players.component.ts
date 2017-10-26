@@ -11,9 +11,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class PlayersComponent implements OnInit {
   private players: Observable<any[]>;
-  test = [];
   constructor(public playersService: PlayersService, private firebase: AngularFireDatabase) {
-    this.players = firebase.list('/players').valueChanges();
+    this.players = this.firebase.list<any>('/players').valueChanges();
   }
 
   ngOnInit() {
